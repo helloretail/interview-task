@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hello Retail Interview Task</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+	<main id="app" role="main" class="flex-shrink-0">
+		<div class="container card my-5">
+			<div class="card-body">
+				<h1>It's alive!</h1>
+				<p>{{ message }}</p>
+				<p>{{ serverMessage }}</p>
+			</div>
+		</div>
+	</main>
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				message: 'Hello World',
+				serverMessage: 'Loading message from server'
+			},
+			mounted() {
+				this.load();
+			},
+			methods: {
+				load() {
+					var request = new XMLHttpRequest();
+					request.open('GET', '/products', true);
+					request.onload = () => {
+						if (request.status >= 200 && request.status < 400) {
+							var data = JSON.parse(request.responseText);
+							this.serverMessage = data.message;
+						} else {
+							console.log("Got an error from the server");
+						}
+					};
+					request.onerror = () => {
+						console.log("Could not connect to the server");
+					};
+					request.send();
+				}
+			}
+		})
+	</script>
+</body>
+</html>
