@@ -24,7 +24,7 @@ The API for getting the complete list of products is hosted within the sample pr
 
 The app should be developed as a frontend implemented in Javascript/HTML that uses an API implemented in Java. The scaffolding already implemented should provide a good basis for this. The frontend part for the scaffolding is implemented in `/src/main/resources/static/index.html` the backend part is implemented in `/src/main/java/com/helloretail/interviewtask/ProductsController.java`.
 
-Even though the API to get the complete list of products is just some static files hosted within the project the API should be considered external from the app. You should not make any assumptions about the number of products on each page or the number of pages. You should also not change the json files in any way.
+Even though the API to get the complete list of products is just some static files hosted within the project the API should be considered external from the app, and not something you have any control of.
 
 ## Final remarks
 
