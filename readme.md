@@ -28,4 +28,4 @@ Even though the API to get the complete list of products is just some static fil
 
 ## Final remarks
 
-You should spend no more than two hours on the task. The implementation will be used as basis for discussions during the technical interview. If you would have liked to do more stuff but ran out of time, please remember what you would have liked to do, so that we can discuss that. Once you have completed the task your implementation please send it to us.
+You should spend no more than two hours on the task. The implementation will be used as basis for discussions during the technical interview. If you would have liked to do more stuff but ran out of time, please remember what you would have liked to do, so that we can discuss that. Once you have completed the task your implementation please send it to us. Our mailsystem unfortunately blocks zip-files with code, so please send a link to a Dropbox, Google Drive or other location where we can download the files from.
