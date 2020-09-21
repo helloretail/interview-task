@@ -18,13 +18,11 @@ The scaffolding code is implemented using [Spring Boot](https://spring.io/projec
 
 After the project has compiled and started you should be able to open the web app on [http://localhost:8080/](http://localhost:8080/)
 
-The API for getting the complete list of products is hosted within the sample project. The list of products is paginated, so you will have to make more than one request to get all the products. The products can be fetched from `http://localhost:8080/feed/products.json`. When you parse the response it will contain a list of products and a `next` field containing the path of the next page of products. If the `next` field is null there is no further pages.
+The API for getting the complete list of products is available at the url [https://raw.githubusercontent.com/helloretail/interview-task-data/master/developer/products.json](https://raw.githubusercontent.com/helloretail/interview-task-data/master/developer/products.json). The list of products is paginated, so you will have to make more than one request to get all the products. When you parse the response it will contain a list of products and a `next` field containing the url of the next page of products. If the `next` field is null there is no further pages.
 
 ## Requirements
 
 The app should be developed as a frontend implemented in Javascript/HTML that uses an API implemented in Java. The scaffolding already implemented should provide a good basis for this. The frontend part for the scaffolding is implemented in `/src/main/resources/static/index.html` the backend part is implemented in `/src/main/java/com/helloretail/interviewtask/ProductsController.java`.
-
-Even though the API to get the complete list of products is just some static files hosted within the project the API should be considered external from the app, and not something you have any control of.
 
 ## Final remarks
 
